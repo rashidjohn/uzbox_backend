@@ -1,23 +1,16 @@
-import multiprocessing
+# Railway bepul plan uchun optimallashtirilgan
 
-# Worker sozlamalari
-workers     = multiprocessing.cpu_count() * 2 + 1
+workers     = 2          # kam xotira uchun (CPU*2+1 emas)
 worker_class = "sync"
-worker_connections = 1000
-timeout     = 30
+timeout     = 120
 keepalive   = 2
-
-# Binding
 bind        = "0.0.0.0:8000"
-
-# Logging
 accesslog   = "-"
 errorlog    = "-"
 loglevel    = "warning"
-
-# Process nomi
 proc_name   = "uzbox_backend"
 
-# Xavfsizlik
-limit_request_line   = 4094
-limit_request_fields = 100
+# Xotira tejash
+max_requests        = 1000
+max_requests_jitter = 100
+preload_app         = False   # preload o'chirildi — xotira tejaydi
