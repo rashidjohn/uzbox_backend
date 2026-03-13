@@ -8,8 +8,9 @@ RUN apt-get update \
        libpq-dev gcc curl \
     && rm -rf /var/lib/apt/lists/*
 
-# Python dependencies
+# Python dependencies — requirements/ papkasi ham ko'chiriladi
 COPY requirements.txt .
+COPY requirements/ requirements/
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
@@ -24,11 +25,6 @@ EXPOSE 8000
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-    CMD curl -f http://localhost:8000/admin/login/ || exit 1
+    CMD curl -f http://localhost:8000/uzb-secure-admin/login/ || exit 1
 
-CMD ["gunicorn", "config.wsgi:application", \
-     "--bind", "0.0.0.0:8000", \
-     "--workers", "3", \
-     "--timeout", "120", \
-     "--access-logfile", "-", \
-     "--error-logfile", "-"]
+CMD ["gunicorn", "-c", "gunicorn.conf.py", "config.wsgi:application"]
