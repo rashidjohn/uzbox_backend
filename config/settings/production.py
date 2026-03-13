@@ -27,14 +27,28 @@ DATABASES["default"]["OPTIONS"]      = {"sslmode": "require"}
 
 # ── WhiteNoise — static fayllar (Nginx shart emas) ────────
 MIDDLEWARE.insert(1, "whitenoise.middleware.WhiteNoiseMiddleware")
-STORAGES = {
-    "default": {
-        "BACKEND": "cloudinary_storage.storage.MediaCloudinaryStorage",
-    },
-    "staticfiles": {
-        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
-    },
-}
+USE_CLOUDINARY = config("CLOUDINARY_CLOUD_NAME", default="")
+if USE_CLOUDINARY:
+    STORAGES = {
+        "default": {
+            "BACKEND": "cloudinary_storage.storage.MediaCloudinaryStorage",
+        },
+        "staticfiles": {
+            "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+        },
+    }
+else:
+    # Cloudinary yo'q — lokal saqlash (Railway da vaqtinchalik)
+    STORAGES = {
+        "default": {
+            "BACKEND": "django.core.files.storage.FileSystemStorage",
+        },
+        "staticfiles": {
+            "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+        },
+    }
+    MEDIA_URL  = "/media/"
+    MEDIA_ROOT = "/tmp/media"  # Railway da /tmp ishlaydi
 
 # ── Sentry — error tracking ───────────────────────────────
 SENTRY_DSN = config("SENTRY_DSN", default="")
@@ -52,5 +66,5 @@ LOGGING["root"]["level"]              = "WARNING"
 LOGGING["loggers"]["apps"]["level"]   = "WARNING"
 LOGGING["loggers"]["django"]["level"] = "ERROR"
 
-# ── Email — production SMTP ─────────────────────────────
-EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+# ── Email ────────────────────────────────────────────────
+EMAIL_BACKEND = config("EMAIL_BACKEND", default="django.core.mail.backends.console.EmailBackend")
