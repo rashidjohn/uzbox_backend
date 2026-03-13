@@ -1,0 +1,23 @@
+version: '3.9'
+
+# Development uchun — faqat DB va Redis, Django local ishlatiladi
+services:
+
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB:       shopuz_db
+      POSTGRES_USER:     shopuz_user
+      POSTGRES_PASSWORD: shopuz_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_dev_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+
+volumes:
+  postgres_dev_data:

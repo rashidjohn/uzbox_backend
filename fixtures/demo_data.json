@@ -1,0 +1,703 @@
+[
+  {
+    "model": "products.category",
+    "pk": 1,
+    "fields": {
+      "name": "Elektronika",
+      "slug": "elektronika",
+      "parent": null,
+      "image": null,
+      "is_active": true,
+      "order": 1
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 2,
+    "fields": {
+      "name": "Kiyim",
+      "slug": "kiyim",
+      "parent": null,
+      "image": null,
+      "is_active": true,
+      "order": 2
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 3,
+    "fields": {
+      "name": "Sport",
+      "slug": "sport",
+      "parent": null,
+      "image": null,
+      "is_active": true,
+      "order": 3
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 4,
+    "fields": {
+      "name": "Uy-rozgor",
+      "slug": "uy-rozgor",
+      "parent": null,
+      "image": null,
+      "is_active": true,
+      "order": 4
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 5,
+    "fields": {
+      "name": "Gozallik",
+      "slug": "gozallik",
+      "parent": null,
+      "image": null,
+      "is_active": true,
+      "order": 5
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 6,
+    "fields": {
+      "name": "Kitoblar",
+      "slug": "kitoblar",
+      "parent": null,
+      "image": null,
+      "is_active": true,
+      "order": 6
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 7,
+    "fields": {
+      "name": "Smartfonlar",
+      "slug": "smartfonlar",
+      "parent": 1,
+      "image": null,
+      "is_active": true,
+      "order": 1
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 8,
+    "fields": {
+      "name": "Audio",
+      "slug": "audio",
+      "parent": 1,
+      "image": null,
+      "is_active": true,
+      "order": 2
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 9,
+    "fields": {
+      "name": "Erkaklar kiyimi",
+      "slug": "erkaklar-kiyimi",
+      "parent": 2,
+      "image": null,
+      "is_active": true,
+      "order": 1
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 10,
+    "fields": {
+      "name": "Ayollar kiyimi",
+      "slug": "ayollar-kiyimi",
+      "parent": 2,
+      "image": null,
+      "is_active": true,
+      "order": 2
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": "11111111-1111-1111-1111-111111111111",
+    "fields": {
+      "name": "Samsung Galaxy S24 Ultra 256GB",
+      "slug": "samsung-galaxy-s24-ultra",
+      "description": "Samsung Galaxy S24 Ultra — eng yangi S seriyasi flagmani. 200MP kamera, S Pen qo'llab-quvvatlanishi, Snapdragon 8 Gen 3 protsessori va 5000mAh batareya.",
+      "category": 7,
+      "price": "12500000.00",
+      "discount_price": "10990000.00",
+      "stock": 15,
+      "is_active": true,
+      "rating_avg": 4.8,
+      "review_count": 124
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": "99999999-9999-9999-9999-999999999999",
+    "fields": {
+      "name": "iPhone 15 Pro Max 256GB",
+      "slug": "iphone-15-pro-max",
+      "description": "iPhone 15 Pro Max — Apple A17 Pro chip, titanium korpus, 48MP kamera tizimi va USB-C port.",
+      "category": 7,
+      "price": "16500000.00",
+      "discount_price": null,
+      "stock": 8,
+      "is_active": true,
+      "rating_avg": 4.9,
+      "review_count": 89
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": "dddddddd-dddd-dddd-dddd-dddddddddddd",
+    "fields": {
+      "name": "Xiaomi Redmi Note 13 Pro",
+      "slug": "xiaomi-redmi-note-13-pro",
+      "description": "Xiaomi Redmi Note 13 Pro — 200MP kamera, AMOLED displey, 67W tez zaryadlash.",
+      "category": 7,
+      "price": "4200000.00",
+      "discount_price": "3500000.00",
+      "stock": 35,
+      "is_active": true,
+      "rating_avg": 4.5,
+      "review_count": 67
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": "eeeeeeee-eeee-eeee-eeee-eeeeeeeeeeee",
+    "fields": {
+      "name": "Samsung Galaxy A55 5G",
+      "slug": "samsung-galaxy-a55",
+      "description": "Samsung Galaxy A55 — o'rta narx segmentining eng yaxshi tanlovi. 50MP kamera, IP67 himoya.",
+      "category": 7,
+      "price": "5800000.00",
+      "discount_price": "4900000.00",
+      "stock": 22,
+      "is_active": true,
+      "rating_avg": 4.4,
+      "review_count": 45
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": "44444444-4444-4444-4444-444444444444",
+    "fields": {
+      "name": "Apple AirPods Pro 2nd Gen",
+      "slug": "apple-airpods-pro-2",
+      "description": "AirPods Pro 2-avlod — Active Noise Cancellation, Transparency mode, Personalized Spatial Audio.",
+      "category": 8,
+      "price": "3200000.00",
+      "discount_price": null,
+      "stock": 20,
+      "is_active": true,
+      "rating_avg": 4.9,
+      "review_count": 156
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb",
+    "fields": {
+      "name": "Sony WH-1000XM5",
+      "slug": "sony-wh-1000xm5",
+      "description": "Sony WH-1000XM5 — industry-leading noise cancelling quloqchinlar. 30 soat batareya.",
+      "category": 8,
+      "price": "4200000.00",
+      "discount_price": "3800000.00",
+      "stock": 15,
+      "is_active": true,
+      "rating_avg": 4.8,
+      "review_count": 98
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": "ffffffff-ffff-ffff-ffff-ffffffffffff",
+    "fields": {
+      "name": "JBL Charge 5 Bluetooth Speaker",
+      "slug": "jbl-charge-5",
+      "description": "JBL Charge 5 — kuchli bas, IP67 suv himoyasi, 20 soat batareya muddati.",
+      "category": 8,
+      "price": "1800000.00",
+      "discount_price": "1500000.00",
+      "stock": 28,
+      "is_active": true,
+      "rating_avg": 4.6,
+      "review_count": 72
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+    "fields": {
+      "name": "H&M Slim Fit Jeans",
+      "slug": "hm-slim-fit-jeans",
+      "description": "H&M Slim Fit Jeans — klassik ko'k rangli jinsi shim. Cho'ziluvchi mato, qulay kesim.",
+      "category": 9,
+      "price": "420000.00",
+      "discount_price": "320000.00",
+      "stock": 40,
+      "is_active": true,
+      "rating_avg": 4.2,
+      "review_count": 33
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": "11111111-2222-3333-4444-555555555555",
+    "fields": {
+      "name": "Zara Premium Erkak Ko'ylagi",
+      "slug": "zara-erkak-koylag",
+      "description": "Zara Premium kolleksiyasidan zamonaviy erkak ko'ylagi. Yumshoq mato, klassik kesim.",
+      "category": 9,
+      "price": "650000.00",
+      "discount_price": "490000.00",
+      "stock": 8,
+      "is_active": true,
+      "rating_avg": 4.5,
+      "review_count": 21
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": "33333333-3333-3333-3333-333333333333",
+    "fields": {
+      "name": "Zara Ayol Ko'ylagi",
+      "slug": "zara-ayol-koylag",
+      "description": "Zara ayollar kolleksiyasi — nafis mato, zamonaviy dizayn.",
+      "category": 10,
+      "price": "580000.00",
+      "discount_price": "420000.00",
+      "stock": 12,
+      "is_active": true,
+      "rating_avg": 4.5,
+      "review_count": 18
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": "22222222-3333-4444-5555-666666666666",
+    "fields": {
+      "name": "Mango Floral Dress",
+      "slug": "mango-floral-dress",
+      "description": "Mango gul naqshli ko'ylak — yoz mavsumi uchun ideal, yengil va nafis.",
+      "category": 10,
+      "price": "890000.00",
+      "discount_price": "690000.00",
+      "stock": 6,
+      "is_active": true,
+      "rating_avg": 4.3,
+      "review_count": 14
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": "22222222-2222-2222-2222-222222222222",
+    "fields": {
+      "name": "Nike Air Max 270 React",
+      "slug": "nike-air-max-270-react",
+      "description": "Nike Air Max 270 React — Max Air yostig'i va React ko'pik podoshvasi bilan maksimal qulaylik.",
+      "category": 3,
+      "price": "1890000.00",
+      "discount_price": null,
+      "stock": 30,
+      "is_active": true,
+      "rating_avg": 4.6,
+      "review_count": 87
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": "66666666-6666-6666-6666-666666666666",
+    "fields": {
+      "name": "Adidas Ultraboost 23",
+      "slug": "adidas-ultraboost-23",
+      "description": "Adidas Ultraboost 23 — professional yuguruvchilar uchun BOOST texnologiyasi.",
+      "category": 3,
+      "price": "2100000.00",
+      "discount_price": null,
+      "stock": 12,
+      "is_active": true,
+      "rating_avg": 4.7,
+      "review_count": 63
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": "cccccccc-cccc-cccc-cccc-cccccccccccc",
+    "fields": {
+      "name": "Puma RS-X",
+      "slug": "puma-rs-x",
+      "description": "Puma RS-X — retro uslubidagi sport poyabzali. RS texnologiyasi qulaylik ta'minlaydi.",
+      "category": 3,
+      "price": "1200000.00",
+      "discount_price": null,
+      "stock": 25,
+      "is_active": true,
+      "rating_avg": 4.3,
+      "review_count": 29
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": "55555555-5555-5555-5555-555555555555",
+    "fields": {
+      "name": "IKEA Stol Lampasi Minimalist",
+      "slug": "ikea-stol-lampasi",
+      "description": "IKEA minimalist stol lampasi — ko'z charchamaslik uchun yumshoq nurlanish, USB port.",
+      "category": 4,
+      "price": "380000.00",
+      "discount_price": "290000.00",
+      "stock": 50,
+      "is_active": true,
+      "rating_avg": 4.3,
+      "review_count": 41
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": "33333333-4444-5555-6666-777777777777",
+    "fields": {
+      "name": "Tefal Non-Stick Qozon 24cm",
+      "slug": "tefal-qozon-24",
+      "description": "Tefal non-stick qozon — yopishmaydigan qoplama, induktsiyadagi pechka uchun mos.",
+      "category": 4,
+      "price": "520000.00",
+      "discount_price": null,
+      "stock": 33,
+      "is_active": true,
+      "rating_avg": 4.6,
+      "review_count": 55
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": "77777777-7777-7777-7777-777777777777",
+    "fields": {
+      "name": "L'Oreal Serum Vitamin C",
+      "slug": "loreal-serum-vitamin-c",
+      "description": "L'Oreal Revitalift 12% Vitamin C serumi — teri rangini yorqinlashtiradi, wrinkle kamaytiradi.",
+      "category": 5,
+      "price": "220000.00",
+      "discount_price": "189000.00",
+      "stock": 100,
+      "is_active": true,
+      "rating_avg": 4.4,
+      "review_count": 38
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": "44444444-5555-6666-7777-888888888888",
+    "fields": {
+      "name": "Nivea Q10 Anti-Age Krem",
+      "slug": "nivea-q10-anti-age",
+      "description": "Nivea Q10 anti-age krem — ajinlarni kamaytiradi, terini namlaydi.",
+      "category": 5,
+      "price": "95000.00",
+      "discount_price": null,
+      "stock": 80,
+      "is_active": true,
+      "rating_avg": 4.2,
+      "review_count": 24
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": "88888888-8888-8888-8888-888888888888",
+    "fields": {
+      "name": "Atomic Habits — James Clear",
+      "slug": "atomic-habits",
+      "description": "Odatlar haqida dunyodagi eng mashhur kitob. O'zbek tilida.",
+      "category": 6,
+      "price": "95000.00",
+      "discount_price": null,
+      "stock": 45,
+      "is_active": true,
+      "rating_avg": 4.9,
+      "review_count": 112
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": "55555555-6666-7777-8888-999999999999",
+    "fields": {
+      "name": "Sapiens — Yuval Noah Harari",
+      "slug": "sapiens-harari",
+      "description": "Insoniyat tarixi haqida inqilobiy asar. O'zbek tilida chop etilgan.",
+      "category": 6,
+      "price": "115000.00",
+      "discount_price": "99000.00",
+      "stock": 30,
+      "is_active": true,
+      "rating_avg": 4.8,
+      "review_count": 78
+    }
+  },
+  {
+    "model": "products.productattribute",
+    "pk": 1,
+    "fields": {
+      "product": "11111111-1111-1111-1111-111111111111",
+      "name": "Ekran",
+      "value": "6.8\" Dynamic AMOLED 2X, 120Hz"
+    }
+  },
+  {
+    "model": "products.productattribute",
+    "pk": 2,
+    "fields": {
+      "product": "11111111-1111-1111-1111-111111111111",
+      "name": "Protsessor",
+      "value": "Snapdragon 8 Gen 3"
+    }
+  },
+  {
+    "model": "products.productattribute",
+    "pk": 3,
+    "fields": {
+      "product": "11111111-1111-1111-1111-111111111111",
+      "name": "Kamera",
+      "value": "200MP + 12MP + 10MP + 50MP"
+    }
+  },
+  {
+    "model": "products.productattribute",
+    "pk": 4,
+    "fields": {
+      "product": "11111111-1111-1111-1111-111111111111",
+      "name": "Batareya",
+      "value": "5000mAh, 45W tez zaryadlash"
+    }
+  },
+  {
+    "model": "products.productattribute",
+    "pk": 5,
+    "fields": {
+      "product": "11111111-1111-1111-1111-111111111111",
+      "name": "Xotira",
+      "value": "12GB RAM / 256GB"
+    }
+  },
+  {
+    "model": "products.productattribute",
+    "pk": 6,
+    "fields": {
+      "product": "99999999-9999-9999-9999-999999999999",
+      "name": "Ekran",
+      "value": "6.7\" Super Retina XDR, ProMotion 120Hz"
+    }
+  },
+  {
+    "model": "products.productattribute",
+    "pk": 7,
+    "fields": {
+      "product": "99999999-9999-9999-9999-999999999999",
+      "name": "Chip",
+      "value": "Apple A17 Pro (3nm)"
+    }
+  },
+  {
+    "model": "products.productattribute",
+    "pk": 8,
+    "fields": {
+      "product": "99999999-9999-9999-9999-999999999999",
+      "name": "Kamera",
+      "value": "48MP + 12MP + 12MP (5x zoom)"
+    }
+  },
+  {
+    "model": "products.productattribute",
+    "pk": 9,
+    "fields": {
+      "product": "99999999-9999-9999-9999-999999999999",
+      "name": "Xotira",
+      "value": "8GB RAM / 256GB"
+    }
+  },
+  {
+    "model": "products.productattribute",
+    "pk": 10,
+    "fields": {
+      "product": "99999999-9999-9999-9999-999999999999",
+      "name": "Korpus",
+      "value": "Titanium Grade 5"
+    }
+  },
+  {
+    "model": "products.productattribute",
+    "pk": 11,
+    "fields": {
+      "product": "44444444-4444-4444-4444-444444444444",
+      "name": "Chip",
+      "value": "Apple H2"
+    }
+  },
+  {
+    "model": "products.productattribute",
+    "pk": 12,
+    "fields": {
+      "product": "44444444-4444-4444-4444-444444444444",
+      "name": "ANC",
+      "value": "Active Noise Cancellation 2-avlod"
+    }
+  },
+  {
+    "model": "products.productattribute",
+    "pk": 13,
+    "fields": {
+      "product": "44444444-4444-4444-4444-444444444444",
+      "name": "Batareya",
+      "value": "6 soat (30 soat quticha bilan)"
+    }
+  },
+  {
+    "model": "products.productattribute",
+    "pk": 14,
+    "fields": {
+      "product": "44444444-4444-4444-4444-444444444444",
+      "name": "Ulanish",
+      "value": "Bluetooth 5.3"
+    }
+  },
+  {
+    "model": "products.productattribute",
+    "pk": 15,
+    "fields": {
+      "product": "44444444-4444-4444-4444-444444444444",
+      "name": "Suv himoyasi",
+      "value": "IPX4"
+    }
+  },
+  {
+    "model": "products.productattribute",
+    "pk": 16,
+    "fields": {
+      "product": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb",
+      "name": "Batareya",
+      "value": "30 soat (ANC yoqilgan holda)"
+    }
+  },
+  {
+    "model": "products.productattribute",
+    "pk": 17,
+    "fields": {
+      "product": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb",
+      "name": "ANC",
+      "value": "Industry-leading noise cancelling"
+    }
+  },
+  {
+    "model": "products.productattribute",
+    "pk": 18,
+    "fields": {
+      "product": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb",
+      "name": "Ulanish",
+      "value": "Bluetooth 5.2, Multipoint"
+    }
+  },
+  {
+    "model": "products.productattribute",
+    "pk": 19,
+    "fields": {
+      "product": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb",
+      "name": "Vazn",
+      "value": "250g"
+    }
+  },
+  {
+    "model": "products.productattribute",
+    "pk": 20,
+    "fields": {
+      "product": "dddddddd-dddd-dddd-dddd-dddddddddddd",
+      "name": "Ekran",
+      "value": "6.67\" AMOLED, 120Hz"
+    }
+  },
+  {
+    "model": "products.productattribute",
+    "pk": 21,
+    "fields": {
+      "product": "dddddddd-dddd-dddd-dddd-dddddddddddd",
+      "name": "Kamera",
+      "value": "200MP asosiy, OIS"
+    }
+  },
+  {
+    "model": "products.productattribute",
+    "pk": 22,
+    "fields": {
+      "product": "dddddddd-dddd-dddd-dddd-dddddddddddd",
+      "name": "Batareya",
+      "value": "5100mAh, 67W"
+    }
+  },
+  {
+    "model": "products.productattribute",
+    "pk": 23,
+    "fields": {
+      "product": "dddddddd-dddd-dddd-dddd-dddddddddddd",
+      "name": "Xotira",
+      "value": "8GB RAM / 256GB"
+    }
+  },
+  {
+    "model": "products.productattribute",
+    "pk": 24,
+    "fields": {
+      "product": "22222222-2222-2222-2222-222222222222",
+      "name": "Podoshva",
+      "value": "Max Air + React ko'pik"
+    }
+  },
+  {
+    "model": "products.productattribute",
+    "pk": 25,
+    "fields": {
+      "product": "22222222-2222-2222-2222-222222222222",
+      "name": "Material",
+      "value": "Mesh va synthetic upper"
+    }
+  },
+  {
+    "model": "products.productattribute",
+    "pk": 26,
+    "fields": {
+      "product": "22222222-2222-2222-2222-222222222222",
+      "name": "O'lcham",
+      "value": "36-46 EU"
+    }
+  },
+  {
+    "model": "products.productattribute",
+    "pk": 27,
+    "fields": {
+      "product": "33333333-4444-5555-6666-777777777777",
+      "name": "O'lcham",
+      "value": "24 sm"
+    }
+  },
+  {
+    "model": "products.productattribute",
+    "pk": 28,
+    "fields": {
+      "product": "33333333-4444-5555-6666-777777777777",
+      "name": "Qoplama",
+      "value": "Titanium Excellence non-stick"
+    }
+  },
+  {
+    "model": "products.productattribute",
+    "pk": 29,
+    "fields": {
+      "product": "33333333-4444-5555-6666-777777777777",
+      "name": "Mos pechkalar",
+      "value": "Gaz, elektr, induktsiyan"
+    }
+  }
+]

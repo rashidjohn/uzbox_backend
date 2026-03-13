@@ -1,0 +1,177 @@
+/* ══ UzBox Admin Custom CSS ══════════════════════════════════ */
+
+:root {
+  --uzbox-orange: #f97316;
+  --uzbox-dark:   #1a1a18;
+  --uzbox-light:  #fff7ed;
+}
+
+/* Brand rangi */
+.brand-link .brand-text {
+  font-weight: 800 !important;
+  font-size: 20px !important;
+  letter-spacing: -0.5px;
+}
+
+/* Sidebar orange accent */
+.sidebar-dark-orange .nav-sidebar > .nav-item > .nav-link.active {
+  background: linear-gradient(135deg, #f97316, #ea580c) !important;
+  box-shadow: 0 4px 12px rgba(249,115,22,0.4);
+  border-radius: 8px;
+}
+
+.sidebar-dark-orange .nav-sidebar > .nav-item > .nav-link:hover {
+  background: rgba(249,115,22,0.15) !important;
+  border-radius: 8px;
+}
+
+/* Kartalar */
+.card {
+  border-radius: 12px !important;
+  border: none !important;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07) !important;
+}
+
+.card-header {
+  border-radius: 12px 12px 0 0 !important;
+  font-weight: 700;
+}
+
+/* Dashboard info boxes */
+.info-box {
+  border-radius: 12px !important;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08) !important;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.info-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.13) !important;
+}
+.info-box .info-box-icon {
+  border-radius: 12px 0 0 12px !important;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(135deg, #f97316, #ea580c) !important;
+  border-color: #ea580c !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+}
+.btn-primary:hover {
+  background: linear-gradient(135deg, #ea580c, #c2410c) !important;
+  box-shadow: 0 4px 12px rgba(249,115,22,0.4) !important;
+}
+
+/* Table */
+.table thead th {
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #6b6b60;
+  border-bottom: 2px solid #f0ede8;
+}
+.table-hover tbody tr:hover {
+  background: #fff7ed !important;
+}
+
+/* Navbar */
+.main-header.navbar {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07) !important;
+  border-bottom: 2px solid #f0ede8 !important;
+}
+
+/* Avatar rasm */
+.img-thumbnail {
+  border-radius: 50% !important;
+  border: 3px solid #f97316 !important;
+  padding: 2px !important;
+}
+
+/* Status badge lar */
+.badge {
+  border-radius: 100px !important;
+  padding: 4px 12px !important;
+  font-weight: 700 !important;
+}
+
+/* Search bar */
+.navbar-search-block .form-control {
+  border-radius: 8px !important;
+  border: 2px solid #e8e6e0 !important;
+}
+.navbar-search-block .form-control:focus {
+  border-color: #f97316 !important;
+  box-shadow: 0 0 0 3px rgba(249,115,22,0.15) !important;
+}
+
+/* Pagination */
+.pagination .page-link {
+  border-radius: 8px !important;
+  margin: 0 2px;
+  font-weight: 600;
+}
+.pagination .page-item.active .page-link {
+  background: #f97316 !important;
+  border-color: #f97316 !important;
+}
+
+/* Fieldset */
+fieldset.module {
+  border-radius: 10px !important;
+  border: 1px solid #e8e6e0 !important;
+}
+fieldset.module h2 {
+  border-radius: 10px 10px 0 0 !important;
+  background: linear-gradient(135deg, #f97316, #ea580c) !important;
+  color: white !important;
+  font-weight: 700 !important;
+}
+
+/* Avatar preview */
+.avatar-preview {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f97316;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Dashboard welcome */
+#content-main > .jumbotron {
+  background: linear-gradient(135deg, #fff7ed, #fef3c7) !important;
+  border-radius: 16px !important;
+  border: none !important;
+}
+
+/* Content area */
+.content-wrapper {
+  background: #faf9f7 !important;
+}
+
+/* Inline admin table */
+.inline-group .tabular table thead {
+  background: linear-gradient(135deg, #f97316, #ea580c);
+  color: white;
+}
+.inline-group .tabular table thead th {
+  color: white !important;
+}
+
+/* Delete confirm */
+.errornote, .errorlist {
+  border-radius: 8px !important;
+}
+.messagelist .success {
+  border-radius: 8px !important;
+  background: #f0fdf4 !important;
+  border-left: 4px solid #22c55e !important;
+  color: #15803d !important;
+}
