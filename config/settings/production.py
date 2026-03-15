@@ -1,8 +1,7 @@
 from .base import *
 from decouple import config
 
-DEBUG         = False
-ALLOWED_HOSTS = config("ALLOWED_HOSTS", default="").split(",")
+ALLOWED_HOSTS = config("ALLOWED_HOSTS", default="127.0.0.1,localhost").split(",")
 
 # ── HTTPS xavfsizlik ──────────────────────────────────────
 SECURE_SSL_REDIRECT            = True
@@ -27,28 +26,17 @@ DATABASES["default"]["OPTIONS"]      = {"sslmode": "require"}
 
 # ── WhiteNoise — static fayllar (Nginx shart emas) ────────
 MIDDLEWARE.insert(1, "whitenoise.middleware.WhiteNoiseMiddleware")
-USE_CLOUDINARY = config("CLOUDINARY_CLOUD_NAME", default="")
-if USE_CLOUDINARY:
-    STORAGES = {
-        "default": {
-            "BACKEND": "cloudinary_storage.storage.MediaCloudinaryStorage",
-        },
-        "staticfiles": {
-            "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
-        },
-    }
-else:
-    # Cloudinary yo'q — lokal saqlash (Railway da vaqtinchalik)
-    STORAGES = {
-        "default": {
-            "BACKEND": "django.core.files.storage.FileSystemStorage",
-        },
-        "staticfiles": {
-            "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
-        },
-    }
-    MEDIA_URL  = "/media/"
-    MEDIA_ROOT = "/tmp/media"  # Railway da /tmp ishlaydi
+
+STORAGES = {
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
+MEDIA_URL  = "/media/"
+MEDIA_ROOT = "/tmp/media"  # Railway da /tmp ichida saqlanadi (vaqtinchalik, persistent volume qo'shish tavsiya qilinadi)
 
 # ── Sentry — error tracking ───────────────────────────────
 SENTRY_DSN = config("SENTRY_DSN", default="")

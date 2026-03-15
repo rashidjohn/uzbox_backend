@@ -59,7 +59,7 @@ def login_view(request):
 
 
 @api_view(["POST"])
-@permission_classes([AllowAny])
+@permission_classes([IsAuthenticated])
 def logout_view(request):
     """Refresh tokenni blacklist ga qo'shish"""
     refresh_token = request.data.get("refresh")
@@ -87,6 +87,16 @@ def change_password_view(request):
     if len(new_password) < 8:
         return Response(
             {"error": "Yangi parol kamida 8 ta belgidan iborat bo'lishi kerak"},
+            status=status.HTTP_400_BAD_REQUEST
+        )
+
+    from django.contrib.auth.password_validation import validate_password
+    from django.core.exceptions import ValidationError
+    try:
+        validate_password(new_password, request.user)
+    except ValidationError as e:
+        return Response(
+            {"error": e.messages},
             status=status.HTTP_400_BAD_REQUEST
         )
     if not request.user.check_password(old_password):

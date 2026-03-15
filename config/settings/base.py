@@ -25,8 +25,6 @@ INSTALLED_APPS = [
     "rest_framework_simplejwt.token_blacklist",
     "corsheaders",
     "django_filters",
-    "cloudinary",
-    "cloudinary_storage",
     # local
     "apps.users",
     "apps.products",
@@ -95,12 +93,7 @@ MEDIA_ROOT  = BASE_DIR / "media"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-# ── Cloudinary ────────────────────────────────────────────
-CLOUDINARY_STORAGE = {
-    "CLOUD_NAME": config("CLOUDINARY_CLOUD_NAME", default=""),
-    "API_KEY":    config("CLOUDINARY_API_KEY",    default=""),
-    "API_SECRET": config("CLOUDINARY_API_SECRET", default=""),
-}
+# ── File Storage ──────────────────────────────────────────
 STORAGES = {
     "default": {
         "BACKEND": "django.core.files.storage.FileSystemStorage",

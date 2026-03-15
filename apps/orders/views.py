@@ -56,14 +56,26 @@ class OrderListCreateView(generics.ListCreateAPIView):
 class OrderDetailView(generics.RetrieveUpdateAPIView):
     http_method_names  = ["get", "patch", "head", "options"]
     serializer_class   = OrderSerializer
-    permission_classes = [IsAuthenticated]
+    permission_classes = [AllowAny]
 
     def get_queryset(self):
-        return (
-            Order.objects
-            .filter(user=self.request.user)
-            .prefetch_related("items__product__images")
-        )
+        if self.request.user.is_authenticated:
+            return (
+                Order.objects
+                .filter(user=self.request.user)
+                .prefetch_related("items__product__images")
+            )
+        # Guest fallback
+        return Order.objects.filter(user__isnull=True).prefetch_related("items__product__images")
+
+    def get_object(self):
+        obj = super().get_object()
+        if not self.request.user.is_authenticated:
+            guest_email = self.request.query_params.get("guest_email") or self.request.data.get("guest_email")
+            if not guest_email or obj.guest_email != guest_email:
+                from rest_framework.exceptions import PermissionDenied
+                raise PermissionDenied("Siz ushbu buyurtmani ko'rish huquqiga ega emassiz. To'g'ri guest_email kiriting.")
+        return obj
 
     def perform_update(self, serializer):
         new_status = self.request.data.get("status")
